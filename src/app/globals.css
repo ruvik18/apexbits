@@ -2,37 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ─── DOPIS ────────────────────────────────────────── */
+/* ─── DOPIS — All Weights ───────────────────────────────── */
 @font-face {
   font-family: 'Dopis';
-  src: url('/fonts/Dopis-Light.woff2') format('woff2');
+  src: url('/fonts/Dopis-Light.woff2') format('woff2'),
+       url('/fonts/Dopis-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Dopis';
-  src: url('/fonts/Dopis-Regular.woff2') format('woff2');
+  src: url('/fonts/Dopis-Regular.woff2') format('woff2'),
+       url('/fonts/Dopis-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Dopis';
-  src: url('/fonts/Dopis-Bold.woff2') format('woff2');
+  src: url('/fonts/Dopis-Bold.woff2') format('woff2'),
+       url('/fonts/Dopis-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Dopis';
-  src: url('/fonts/Dopis-Black.woff2') format('woff2');
+  src: url('/fonts/Dopis-Black.woff2') format('woff2'),
+       url('/fonts/Dopis-Black.ttf') format('truetype');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
-/* ─── SEASON SERIF ──────────────────────────────────── */
+/* ─── DOPIS CONDENSED — All Weights ─────────────────────── */
+@font-face {
+  font-family: 'Dopis Condensed';
+  src: url('/fonts/Dopis-LightCondensed.woff2') format('woff2'),
+       url('/fonts/Dopis-LightCondensed.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Dopis Condensed';
+  src: url('/fonts/Dopis-RegularCondensed.woff2') format('woff2'),
+       url('/fonts/Dopis-RegularCondensed.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Dopis Condensed';
+  src: url('/fonts/Dopis-BoldCondensed.woff2') format('woff2'),
+       url('/fonts/Dopis-BoldCondensed.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Dopis Condensed';
+  src: url('/fonts/Dopis-BlackCondensed.woff2') format('woff2'),
+       url('/fonts/Dopis-BlackCondensed.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─── SEASON SERIF ──────────────────────────────────────── */
 @font-face {
   font-family: 'Season Serif';
   src: url('/fonts/SeasonSerif-TRIAL-Light.ttf') format('truetype');
@@ -69,7 +107,7 @@
   font-display: swap;
 }
 
-/* ─── AKKURAT MONO ──────────────────────────────────── */
+/* ─── AKKURAT MONO ──────────────────────────────────────── */
 @font-face {
   font-family: 'Akkurat Mono';
   src: url('/fonts/AkkuratMono-Regular.woff2') format('woff2');
@@ -78,44 +116,32 @@
   font-display: swap;
 }
 
-/* ─── DESIGN TOKENS ─────────────────────────────────── */
+/* ─── DESIGN TOKENS ─────────────────────────────────────── */
 :root {
-  --bg:    #f9f9f0;
-  --ink:   #0f0e0b;
-  --coal:  #21201c;
-  --ash:   #3d3b34;
-  --tan:   #9d937c;
-  --mint:  #d5fad3;
-  --blue:  #badbee;
-  --cream: #efecca;
-  --border: rgba(15,14,11,0.12);
-  --font-display: 'Dopis', system-ui, sans-serif;
-  --font-serif:   'Season Serif', Georgia, 'Times New Roman', serif;
-  --font-mono:    'Akkurat Mono', 'SF Mono', Consolas, monospace;
+  --bg:      #f9f9f0;
+  --ink:     #0f0e0b;
+  --coal:    #21201c;
+  --ash:     #3d3b34;
+  --tan:     #9d937c;
+  --mint:    #d5fad3;
+  --blue:    #badbee;
+  --cream:   #efecca;
+  --border:  rgba(15,14,11,0.1);
 }
 
-/* ─── RESET ─────────────────────────────────────────── */
+/* ─── RESET ─────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
   background-color: var(--bg);
   color: var(--ink);
-  font-family: var(--font-serif);
+  font-family: 'Season Serif', Georgia, 'Times New Roman', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
 
-/* ─── GRID BACKGROUND ───────────────────────────────── */
-.grid-bg {
-  background-image:
-    linear-gradient(var(--border) 1px, transparent 1px),
-    linear-gradient(90deg, var(--border) 1px, transparent 1px);
-  background-size: 40px 40px;
-  background-color: var(--bg);
-}
-
-/* ─── INPUT RANGE ───────────────────────────────────── */
+/* ─── INPUT RANGE ───────────────────────────────────────── */
 input[type='range'] {
   -webkit-appearance: none;
   appearance: none;
@@ -144,17 +170,17 @@ input[type='range']::-moz-range-thumb {
   cursor: pointer;
 }
 
-/* ─── SCROLLBAR ─────────────────────────────────────── */
+/* ─── SCROLLBAR ─────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: #ccc8bb; border-radius: 3px; }
 
-/* ─── NUMBER INPUT ──────────────────────────────────── */
+/* ─── NUMBER INPUT ──────────────────────────────────────── */
 input[type='number']::-webkit-outer-spin-button,
 input[type='number']::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
 input[type='number'] { -moz-appearance: textfield; }
 
-/* ─── TICKER ────────────────────────────────────────── */
+/* ─── ANIMATIONS ────────────────────────────────────────── */
 @keyframes ticker {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
@@ -165,22 +191,17 @@ input[type='number'] { -moz-appearance: textfield; }
 }
 .animate-ticker:hover { animation-play-state: paused; }
 
-/* ─── FADE UP ───────────────────────────────────────── */
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(22px); }
+  from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-.fade-up {
-  opacity: 0;
-  animation: fadeUp 0.7s ease forwards;
-}
+.fade-up   { opacity: 0; animation: fadeUp 0.7s ease forwards; }
 .fade-up-1 { animation-delay: 0.05s; }
 .fade-up-2 { animation-delay: 0.18s; }
 .fade-up-3 { animation-delay: 0.32s; }
 .fade-up-4 { animation-delay: 0.46s; }
 .fade-up-5 { animation-delay: 0.60s; }
 
-/* ─── SVG PATH DRAW ANIMATION ───────────────────────── */
 @keyframes drawStroke {
   to { stroke-dashoffset: 0; }
 }
@@ -189,14 +210,14 @@ input[type='number'] { -moz-appearance: textfield; }
   stroke-dashoffset: 800;
   animation: drawStroke 1.8s ease forwards;
 }
-.draw-d2 { animation-delay: 0.12s; }
-.draw-d3 { animation-delay: 0.24s; }
-.draw-d4 { animation-delay: 0.36s; }
-.draw-d5 { animation-delay: 0.48s; }
-.draw-d6 { animation-delay: 0.60s; }
-.draw-d7 { animation-delay: 0.72s; }
-.draw-d8 { animation-delay: 0.84s; }
-.draw-d9 { animation-delay: 0.96s; }
+.draw-d2  { animation-delay: 0.12s; }
+.draw-d3  { animation-delay: 0.24s; }
+.draw-d4  { animation-delay: 0.36s; }
+.draw-d5  { animation-delay: 0.48s; }
+.draw-d6  { animation-delay: 0.60s; }
+.draw-d7  { animation-delay: 0.72s; }
+.draw-d8  { animation-delay: 0.84s; }
+.draw-d9  { animation-delay: 0.96s; }
 .draw-d10 { animation-delay: 1.08s; }
 .draw-d11 { animation-delay: 1.20s; }
 .draw-d12 { animation-delay: 1.32s; }
@@ -209,42 +230,21 @@ input[type='number'] { -moz-appearance: textfield; }
 .draw-d19 { animation-delay: 2.16s; }
 .draw-d20 { animation-delay: 2.28s; }
 
-/* Short draw for small elements */
 .draw-short {
   stroke-dasharray: 200;
   stroke-dashoffset: 200;
   animation: drawStroke 0.9s ease forwards;
 }
 
-/* Float for decorative squares */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50%       { transform: translateY(-6px); }
 }
-.float { animation: float 4s ease-in-out infinite; }
+.float      { animation: float 4s ease-in-out infinite; }
 .float-slow { animation: float 6s ease-in-out infinite; }
 
-/* ─── CODE SCROLL ───────────────────────────────────── */
 @keyframes codeScroll {
   from { transform: translateY(0); }
   to   { transform: translateY(-50%); }
 }
 .code-scroll { animation: codeScroll 22s linear infinite; }
-
-/* ─── RESPONSIVE LAYOUT HELPERS ─────────────────────── */
-@media (max-width: 768px) {
-  .hero-grid  { grid-template-columns: 1fr !important; min-height: auto !important; }
-  .hero-grid > div:last-child { height: 280px !important; }
-  .stats-grid { grid-template-columns: repeat(2, 1fr) !important; }
-  .two-col    { grid-template-columns: 1fr !important; }
-  .cta-grid   { grid-template-columns: 1fr !important; }
-}
-
-@media (max-width: 640px) {
-  .footer-grid { grid-template-columns: 1fr 1fr !important; }
-  .footer-grid > div:first-child { grid-column: 1 / -1; }
-}
-
-@media (max-width: 480px) {
-  .stats-grid { grid-template-columns: repeat(2, 1fr) !important; }
-}
