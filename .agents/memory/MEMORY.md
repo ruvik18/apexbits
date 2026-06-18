@@ -1,0 +1,1 @@
+- [Tailwind + Next.js version pinning](tailwind-nextjs-compat.md) — Next.js 14 requires Tailwind v3; Tailwind v4 (installed by default) has incompatible config format and PostCSS plugin name.

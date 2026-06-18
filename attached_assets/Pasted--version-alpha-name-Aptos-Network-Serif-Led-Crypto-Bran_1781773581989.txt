@@ -1,0 +1,267 @@
+---
+version: alpha
+name: "Aptos Network — Serif-Led Crypto Brand"
+description: "Typography baseline relies on Season Serif for hero headline — largest display text, tight negative tracking."
+colors:
+  black: "#0f0e0b"
+  blue: "#badbee"
+  coal: "#21201c"
+  cream: "#efecca"
+  mint: "#d5fad3"
+  pure-white: "#ffffff"
+  white: "#f9f9f0"
+  ash: "#3d3b34"
+  pure-black: "#000000"
+  tan: "#9d937c"
+typography:
+  display-hero:
+    fontFamily: "Season Serif"
+    fontSize: "120px"
+    fontWeight: "335"
+    lineHeight: "114px"
+    letterSpacing: "-3.6px"
+  display-large:
+    fontFamily: "Season Serif"
+    fontSize: "90px"
+    fontWeight: "335"
+    lineHeight: "85.5px"
+    letterSpacing: "-1.8px"
+  display-medium:
+    fontFamily: "Season Serif"
+    fontSize: "55px"
+    fontWeight: "420"
+    lineHeight: "55px"
+    letterSpacing: "-1.1px"
+  heading-2xl:
+    fontFamily: "Season Serif"
+    fontSize: "24px"
+    fontWeight: "420"
+    lineHeight: "26.4px"
+    letterSpacing: "-0.48px"
+  body-large:
+    fontFamily: "Season Serif"
+    fontSize: "18px"
+    fontWeight: "358"
+    lineHeight: "25.2px"
+    letterSpacing: "0.18px"
+  body-base:
+    fontFamily: "Season Serif"
+    fontSize: "16px"
+    fontWeight: "400"
+    lineHeight: "24px"
+  body-small:
+    fontFamily: "Season Serif"
+    fontSize: "16px"
+    fontWeight: "358"
+    lineHeight: "22.4px"
+    letterSpacing: "0.32px"
+  subheading:
+    fontFamily: "Season Serif"
+    fontSize: "20px"
+    fontWeight: "444"
+    lineHeight: "25px"
+    letterSpacing: "-0.2px"
+  code-label:
+    fontFamily: "Akkurat Mono"
+    fontSize: "11px"
+    fontWeight: "400"
+    lineHeight: "14.3px"
+    letterSpacing: "0.33px"
+  code-micro:
+    fontFamily: "Akkurat Mono"
+    fontSize: "9px"
+    fontWeight: "400"
+    lineHeight: "11.7px"
+    letterSpacing: "0.18px"
+rounded:
+  pill: "3.35544e+07px"
+  sharp: "0px"
+spacing:
+  spacing-1: "5px"
+  spacing-2: "10px"
+  spacing-3: "15px"
+  spacing-4: "20px"
+  spacing-5: "25px"
+  spacing-6: "30px"
+  spacing-7: "40px"
+  spacing-8: "45px"
+  spacing-9: "50px"
+  spacing-10: "60px"
+  spacing-11: "120px"
+  spacing-12: "150px"
+  spacing-13: "180px"
+---
+
+## Overview
+
+Typography baseline relies on Season Serif for hero headline — largest display text, tight negative tracking.
+
+This system uses a 5px base grid with scale values 5, 10, 15, 20, 25, 30, 40, 45, 50, 60, 120, 150, 180.
+
+**Signature traits:**
+- Core token rhythm: Token evidence indicates consistent color, spacing, and radius rhythm across visible UI.
+
+## Colors
+
+The palette uses 16 validated color tokens across 2 theme profiles. Semantic roles stay attached to observed usage so generation agents can choose accents without inventing new color meaning.
+
+**Semantic naming:**
+- **border-text** maps to `black`: Role "text" is grounded by usage context "Primary text, borders, nav items, hero heading — dominant foreground color across all zones".
+- **surface-background** maps to `white`: Role "background" is grounded by usage context "Page background, nav bar background, off-white surface base".
+- **content-background** maps to `blue`: Role "background" is grounded by usage context "Checkerboard pattern accent, decorative graphic element".
+- **surface-border** maps to `ash`: Role "border" is grounded by usage context "Subtle dividers, surface-400 dark variant, footer accents".
+
+### Dark Theme
+
+### Text Scale
+- **Pure White** (#ffffff): High-contrast text on darkest surfaces, nav elements. Role: text. {authored: rgb(255, 255, 255), space: rgb, alpha: 0.15}
+- **White** (#f9f9f0): Primary text on dark backgrounds, nav labels, headings. Role: text. {authored: rgb(249, 249, 240), space: rgb, alpha: 0.15}
+
+### Interactive
+- **Ash** (#3d3b34): Subtle dividers and surface accents in dark mode. Role: border. {authored: rgb(61, 59, 52), space: rgb}
+
+### Surface & Shadows
+- **Black** (#0f0e0b): Primary dark page background, hero dark panel, main surface. Role: background. {authored: rgb(15, 14, 11), space: rgb}
+- **Blue** (#badbee): Checkerboard pattern accent, decorative graphic element. Role: background. {authored: rgb(186, 219, 238), space: rgb}
+- **Coal** (#21201c): Secondary dark surface, footer panels. Role: background. {authored: rgb(33, 32, 28), space: rgb}
+- **Cream** (#efecca): Warm off-white surface variant in dark theme header/footer. Role: background. {authored: rgb(239, 236, 202), space: rgb}
+- **Mint** (#d5fad3): Hero section background panel — retained in dark theme. Role: background. {authored: rgb(213, 250, 211), space: rgb}
+
+### Light Theme
+
+### Text Scale
+- **Black** (#0f0e0b): Primary text, borders, nav items, hero heading — dominant foreground color across all zones. Role: text. {authored: rgb(15, 14, 11), space: rgb, alpha: 0.15}
+- **Pure Black** (#000000): CTA button fill, nav pill background, high-contrast interactive elements. Role: text. {authored: rgb(0, 0, 0), space: rgb, alpha: 0.15}
+
+### Interactive
+- **Ash** (#3d3b34): Subtle dividers, surface-400 dark variant, footer accents. Role: border. {authored: rgb(61, 59, 52), space: rgb}
+- **Tan** (#9d937c): Muted divider lines, surface-400 light variant. Role: border. {authored: rgb(157, 147, 124), space: rgb}
+
+### Surface & Shadows
+- **Blue** (#badbee): Checkerboard pattern accent, decorative graphic element. Role: background. {authored: rgb(186, 219, 238), space: rgb}
+- **Coal** (#21201c): Dark surface variant, footer background, secondary dark panel. Role: background. {authored: rgb(33, 32, 28), space: rgb}
+- **Mint** (#d5fad3): Hero section background panel, accent surface highlight. Role: background. {authored: rgb(213, 250, 211), space: rgb}
+- **White** (#f9f9f0): Page background, nav bar background, off-white surface base. Role: background. {authored: rgb(249, 249, 240), space: rgb}
+
+## Typography
+
+Typography uses Season Serif, Akkurat Mono across extracted hierarchy roles. Keep hierarchy mapped to these token rows before adding decorative type styles.
+
+Mixes Season Serif and Akkurat Mono for visual contrast. Weight range spans regular, medium. Sizes range from 9px to 120px.
+
+### Font Roles
+- **Headline Font**: Season Serif
+- **Body Font**: Season Serif
+
+### Type Scale Evidence
+| Role | Font | Size | Weight | Line Height | Letter Spacing | Stack / Features | Notes |
+|------|------|------|--------|-------------|----------------|------------------|-------|
+| Hero headline — largest display text, tight negative tracking | Season Serif | 120px | 335 | 114px | -3.6px | Season Serif | Extracted token |
+| Section hero headings, large display statements | Season Serif | 90px | 335 | 85.5px | -1.8px | Season Serif | Extracted token |
+| Mid-size display headings, feature section titles | Season Serif | 55px | 420 | 55px | -1.1px | Season Serif | Extracted token |
+| Section subheadings, card titles | Season Serif | 24px | 420 | 26.4px | -0.48px | Season Serif | Extracted token |
+| Lead body copy, introductory paragraphs | Season Serif | 18px | 358 | 25.2px | 0.18px | Season Serif | Extracted token |
+| Standard body text, nav labels, general content | Season Serif | 16px | 400 | 24px | normal | Season Serif | Extracted token |
+| Secondary body text, captions, metadata | Season Serif | 16px | 358 | 22.4px | 0.32px | Season Serif | Extracted token |
+| Card subheadings, feature labels | Season Serif | 20px | 444 | 25px | -0.2px | Season Serif | Extracted token |
+| Code panel labels, monospace UI micro-text | Akkurat Mono | 11px | 400 | 14.3px | 0.33px | Akkurat Mono | Extracted token |
+| Code panel body text, syntax display, smallest mono labels | Akkurat Mono | 9px | 400 | 11.7px | 0.18px | Akkurat Mono | Extracted token |
+
+## Layout
+
+Responsive system uses 1 breakpoint tier(s): desktop.
+
+### Responsive Strategy
+- **desktop (Unknown)**: Expand layout density and horizontal composition for wide viewports.
+
+### Spacing System
+| Token | Value | Px | Notes |
+|------|-------|----|-------|
+| spacing-1 | 5px | 5 | Extracted spacing token |
+| spacing-2 | 10px | 10 | Extracted spacing token |
+| spacing-3 | 15px | 15 | Extracted spacing token |
+| spacing-4 | 20px | 20 | Extracted spacing token |
+| spacing-5 | 25px | 25 | Extracted spacing token |
+| spacing-6 | 30px | 30 | Extracted spacing token |
+| spacing-7 | 40px | 40 | Extracted spacing token |
+| spacing-8 | 45px | 45 | Extracted spacing token |
+| spacing-9 | 50px | 50 | Extracted spacing token |
+| spacing-10 | 60px | 60 | Extracted spacing token |
+| spacing-11 | 120px | 120 | Extracted spacing token |
+| spacing-12 | 150px | 150 | Extracted spacing token |
+| spacing-13 | 180px | 180 | Extracted spacing token |
+
+## Elevation & Depth
+
+Keep depth flat unless validated shadow or interaction evidence appears in the extraction payload. Do not invent shadows beyond this evidence boundary.
+
+### Shadow Evidence
+| Shadow Token | Layers | Details |
+|--------------|--------|---------|
+| inset-border-black | 1 | inset -1px 0px 0px 0px rgb(15, 14, 11) |
+| inset-border-tan | 1 | inset -1px 0px 0px 0px rgb(204, 197, 163) |
+| inset-border-blue | 1 | inset -1px 0px 0px 0px rgb(186, 219, 238) |
+
+### Interaction Signals
+| Theme | Signal | Evidence |
+|-------|--------|----------|
+| Light | outline-color | rgb(15, 14, 11) ; oklab(0.163762 -0.000179954 0.00633688 / 0.6) ; rgb(249, 249, 240) |
+| Light | outline-width | 3px |
+| Light | outline-offset | 0px |
+| Light | transform | matrix(1, 0, 0, 1, 0, 0) ; matrix(1, 0, 0, 1, -238.325, 0) ; matrix(0.707107, -0.707107, 0.707107, 0.707107, -125.09, 633.179) |
+| Dark | outline-color | oklab(0.979653 -0.0033434 0.0113728 / 0.6) ; rgb(15, 14, 11) ; rgb(249, 249, 240) |
+| Dark | outline-width | 3px |
+| Dark | outline-offset | 0px |
+| Dark | transform | matrix(1, 0, 0, 1, 0, 0) ; matrix(1, 0, 0, 1, -295.82, 0) ; matrix(0.707107, -0.707107, 0.707107, 0.707107, -125.09, 633.179) |
+
+## Shapes
+
+Shape language maps directly to rounded tokens. Keep component corners consistent with the role mapping below before introducing bespoke geometry.
+
+### Radius Roles
+| Token | Value | Px | Role Mapping |
+|------|-------|----|--------------|
+| sharp | 0px | 0 | Hairline corner |
+| pill | 3.35544e+07px | 33554400 | Large surface corner |
+
+### Geometry Evidence
+| Radius Token | Shape | Units |
+|--------------|-------|-------|
+| pill | 3.35544e+07px | e, px |
+| sharp | 0px | px |
+
+## Components
+
+(none detected)
+
+## Do's and Don'ts
+
+Guardrails protect Core token rhythm without adding unsupported visual claims.
+
+| Do | Don't |
+|----|---------|
+| Do maintain consistent spacing using the base grid | Don't make unsupported claims about absent visual features |
+| Do maintain WCAG AA contrast ratios (4.5:1 for normal text) | Don't mix rounded and sharp corners in the same view |
+| Do use the primary color only for the single most important action per screen |  |
+| Do verify evidence before writing new design-system guidance |  |
+
+## Responsive Evidence
+
+### Breakpoints
+| Name | Width | Key Changes |
+|------|-------|-------------|
+| Breakpoint 1 | Unknown | (min-width: 48rem) |
+
+## Agent Prompt Guide
+
+### Example Component Prompts
+- Create button component using validated primary color role and spacing tokens.
+- Create card component with mapped radius role and evidence-backed elevation.
+- Create form input component using inferred typography hierarchy and border roles.
+
+### Iteration Guide
+1. Start with extracted palette and typography roles only.
+2. Map spacing and radius directly from token tables before visual polish.
+3. Apply component patterns one section at a time and compare against source intent.
+4. Keep elevation claims tied to explicit evidence in output.
+5. Iterate with smallest diffs and re-check section hierarchy after each change.

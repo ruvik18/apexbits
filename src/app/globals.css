@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Season Serif';
+  src: url('/fonts/SeasonSerif-TRIAL-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Season Serif';
+  src: url('/fonts/SeasonSerif-TRIAL-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Season Serif';
+  src: url('/fonts/SeasonSerif-TRIAL-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Season Serif';
+  src: url('/fonts/SeasonSerif-TRIAL-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Season Serif';
+  src: url('/fonts/SeasonSerif-TRIAL-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Akkurat Mono';
+  src: url('/fonts/AkkuratMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --alpha-bg: #f9f9f0;
+  --alpha-ink: #0f0e0b;
+  --alpha-coal: #21201c;
+  --alpha-ash: #3d3b34;
+  --alpha-tan: #9d937c;
+  --alpha-mint: #d5fad3;
+  --alpha-blue: #badbee;
+  --alpha-cream: #efecca;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f9f9f0;
+  color: #0f0e0b;
+  font-family: 'Season Serif', Georgia, 'Times New Roman', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Grid background */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(15, 14, 11, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 14, 11, 0.025) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-color: #f9f9f0;
+}
+
+/* Checkerboard pattern */
+.checkerboard {
+  background-image:
+    repeating-conic-gradient(#badbee 0% 25%, #f9f9f0 0% 50%);
+  background-size: 30px 30px;
+}
+
+/* Range slider overrides */
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 9999px;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #0f0e0b;
+  border: 4px solid #f9f9f0;
+  box-shadow: 0 0 0 1px rgba(15, 14, 11, 0.3);
+  cursor: pointer;
+}
+
+input[type='range']::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #0f0e0b;
+  border: 4px solid #f9f9f0;
+  cursor: pointer;
+}
+
+/* Scroll bar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f9f9f0;
+}
+::-webkit-scrollbar-thumb {
+  background: #9d937c;
+  border-radius: 4px;
+}
+
+/* Hide number input arrows */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+/* SVG drawing animation */
+.draw-animate {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw-path 3s ease forwards;
+}
+
+@keyframes draw-path {
+  to { stroke-dashoffset: 0; }
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Fade up animation */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.8s ease forwards;
+  opacity: 0;
+}
+
+.animate-fade-up-delay-1 { animation-delay: 0.1s; }
+.animate-fade-up-delay-2 { animation-delay: 0.25s; }
+.animate-fade-up-delay-3 { animation-delay: 0.4s; }
+.animate-fade-up-delay-4 { animation-delay: 0.55s; }
+
+/* Ticker */
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-ticker {
+  animation: ticker 40s linear infinite;
+}
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
+
+/* Pulse glow */
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.85; }
+}
+
+.pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* Code scroll */
+@keyframes code-scroll {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+.code-scroll {
+  animation: code-scroll 20s linear infinite;
+}

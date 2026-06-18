@@ -1,0 +1,35 @@
+{
+  "name": "Alphajee x ApexBITS",
+  "short_name": "ApexBITS",
+  "id": "/",
+  "start_url": "/predictor",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fff8e8",
+  "theme_color": "#ecf8d8",
+  "description": "Alphajee x ApexBITS college predictor and score-data tools.",
+  "icons": [
+    {
+      "src": "/favicon-48x48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

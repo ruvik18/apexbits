@@ -1,0 +1,45 @@
+# Local pages that stay on this site
+/predictor.html /predictor 301
+/predictor/ /predictor 301
+/score-data.html /score-data 301
+/score-data/ /score-data 301
+
+# Local aliases for the two retained tools
+/college-predictor /predictor 301
+/college-predictor.html /predictor 301
+/bits-college-predictor /predictor 301
+/bits-college-predictor.html /predictor 301
+/bitsat-college-predictor /predictor 301
+/bitsat-college-predictor.html /predictor 301
+/bitsat-predictor /predictor 301
+/bitsat-predictor.html /predictor 301
+/bitsat-predictor-2026 /predictor 301
+/bitsat-predictor-2026.html /predictor 301
+/bits-predictor /predictor 301
+/bits-predictor.html /predictor 301
+/score-analysis /score-data 301
+/score-analysis.html /score-data 301
+/bitsat-score-data /score-data 301
+/bitsat-score-data.html /score-data 301
+/bitsat-score-analysis /score-data 301
+/bitsat-score-analysis.html /score-data 301
+/phodu-score-data /score-data 301
+/phodu-score-data.html /score-data 301
+/apexbits-score-data /score-data 301
+/apexbits-score-data.html /score-data 301
+
+# Keep local support assets available
+/assets/* /assets/:splat 200
+/android-chrome-192x192.png /android-chrome-192x192.png 200
+/android-chrome-512x512.png /android-chrome-512x512.png 200
+/apple-touch-icon.png /apple-touch-icon.png 200
+/favicon-48x48.png /favicon-48x48.png 200
+/favicon-96x96.png /favicon-96x96.png 200
+/favicon.ico /favicon.ico 200
+/favicon.svg /favicon.svg 200
+/robots.txt /robots.txt 200
+/site.webmanifest /site.webmanifest 200
+/sitemap.xml /sitemap.xml 200
+
+# Everything else belongs to ApexBITS
+/* https://apexbits.site/:splat 301
