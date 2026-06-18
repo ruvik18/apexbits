@@ -17,6 +17,7 @@ const config: Config = {
         mint:     '#d5fad3',
         blue:     '#badbee',
         cream:    '#efecca',
+        sand:     '#f0efe6',
       },
       fontFamily: {
         display:           ['"Dopis"', 'system-ui', 'sans-serif'],
