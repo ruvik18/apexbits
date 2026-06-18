@@ -298,10 +298,10 @@ export default function ScoreDataClient() {
                 setCompareScore(v);
               }}
               aria-label="Enter your BITSAT score out of 390"
-              className="min-w-0 border-0 bg-transparent text-ink font-serif font-normal outline-none p-0"
-              style={{ width: 'min(100%, 360px)', fontSize: 'clamp(2.75rem,7vw,4.45rem)', lineHeight: 0.94, letterSpacing: '-0.07em' }}
+              className="min-w-0 border-0 bg-transparent text-ink font-normal outline-none p-0"
+              style={{ width: 'min(100%, 360px)', fontSize: 'clamp(2.75rem,7vw,4.45rem)', lineHeight: 0.94, letterSpacing: '-0.07em', fontFamily: 'Dopis, system-ui, sans-serif' }}
             />
-            <span className="shrink-0 pb-2 text-tan font-serif font-normal whitespace-nowrap" style={{ fontSize: 'clamp(1.15rem,2.6vw,1.7rem)', letterSpacing: '-0.04em' }}>
+            <span className="shrink-0 pb-2 text-tan font-normal whitespace-nowrap" style={{ fontSize: 'clamp(1.15rem,2.6vw,1.7rem)', letterSpacing: '-0.04em', fontFamily: 'Dopis, system-ui, sans-serif' }}>
               / 390
             </span>
           </div>
@@ -329,7 +329,7 @@ export default function ScoreDataClient() {
             Estimated higher range
           </p>
           <div className="flex items-end flex-wrap" style={{ gap: 'clamp(12px,2.5vw,22px)' }}>
-            <strong className="font-serif font-normal text-bg" style={{ fontSize: 'clamp(3rem,7.5vw,5.25rem)', lineHeight: 0.92, letterSpacing: '-0.075em' }}>
+            <strong className="font-normal text-bg" style={{ fontSize: 'clamp(3rem,7.5vw,5.25rem)', lineHeight: 0.92, letterSpacing: '-0.075em', fontFamily: 'Dopis, system-ui, sans-serif' }}>
               {loading ? '—' : higherRange ? formatRange(higherRange) : '—'}
             </strong>
             <span
@@ -383,7 +383,7 @@ export default function ScoreDataClient() {
                 <span className="block text-tan font-mono text-[10px] font-medium uppercase tracking-[0.12em]">
                   {m.label}
                 </span>
-                <strong className="block mt-2 text-ink font-serif font-normal" style={{ fontSize: 'clamp(1.75rem,4vw,2.6rem)', letterSpacing: '-0.05em', lineHeight: 1 }}>
+                <strong className="block mt-2 text-ink font-normal" style={{ fontSize: 'clamp(1.75rem,4vw,2.6rem)', letterSpacing: '-0.05em', lineHeight: 1, fontFamily: 'Dopis, system-ui, sans-serif' }}>
                   {m.value}
                 </strong>
               </div>

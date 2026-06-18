@@ -177,7 +177,7 @@ export default function PredictorClient() {
           style={{
             fontFamily: "Dopis, system-ui, sans-serif",
             fontSize: "clamp(52px,8vw,108px)",
-            fontWeight: 900,
+            fontWeight: 100,
             lineHeight: 0.92,
             letterSpacing: "-0.03em",
             color: "#0f0e0b",
@@ -217,7 +217,7 @@ export default function PredictorClient() {
           }}
         >
           <span
-            className="flex-shrink-0 inline-flex items-center justify-center text-[#f9f9f0] bg-[#0f0e0b] rounded-full text-sm font-bold"
+            className="flex-shrink-0 inline-flex italic items-center justify-center text-[#f9f9f0] bg-[#0f0e0b] rounded-full text-sm font-bold"
             style={{
               width: "28px",
               height: "28px",
@@ -403,7 +403,7 @@ export default function PredictorClient() {
                   border: 0,
                   background: "transparent",
                   color: "#0f0e0b",
-                  fontFamily: "Season Serif, Georgia, serif",
+                  fontFamily: "Dopis, system-ui, sans-serif",
                   fontSize: "clamp(40px,6vw,62px)",
                   fontWeight: 400,
                   letterSpacing: "-0.04em",
@@ -417,7 +417,7 @@ export default function PredictorClient() {
                   fontWeight: 400,
                   fontSize: "clamp(18px,2.4vw,24px)",
                   whiteSpace: "nowrap",
-                  fontFamily: "Season Serif, Georgia, serif",
+                  fontFamily: "Dopis, system-ui, sans-serif",
                 }}
               >
                 / 390
@@ -794,14 +794,14 @@ export default function PredictorClient() {
                       <span style={{ color: "#9d937c" }}>·</span>
                       <span>
                         <span style={{ color: "#9d937c" }}>2025 close </span>
-                        <b style={{ color: "#0f0e0b", fontWeight: 700 }}>
+                        <b style={{ color: "#0f0e0b", fontWeight: 700, fontFamily: "Dopis, system-ui, sans-serif" }}>
                           {r.close2025}
                         </b>
                       </span>
                       <span style={{ color: "#9d937c" }}>·</span>
                       <span>
                         <span style={{ color: "#9d937c" }}>predicted </span>
-                        <b style={{ color: "#0f0e0b", fontWeight: 700 }}>
+                        <b style={{ color: "#0f0e0b", fontWeight: 700, fontFamily: "Dopis, system-ui, sans-serif" }}>
                           {r.predictedCutoff}
                         </b>
                       </span>
@@ -818,7 +818,7 @@ export default function PredictorClient() {
                   >
                     <strong
                       style={{
-                        fontFamily: "Season Serif, Georgia, serif",
+                        fontFamily: "Dopis, system-ui, sans-serif",
                         fontSize: "clamp(22px,2.3vw,30px)",
                         lineHeight: 1,
                         fontWeight: 400,
