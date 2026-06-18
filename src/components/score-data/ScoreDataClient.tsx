@@ -247,11 +247,13 @@ export default function ScoreDataClient() {
         </p>
         <h1
           className="relative"
-          style={{ fontFamily: 'Season Serif, Georgia, serif', fontSize: 'clamp(52px,8vw,116px)', fontWeight: 400, lineHeight: 0.93, letterSpacing: '-0.035em', color: '#0f0e0b', margin: 0 }}
+          style={{ fontFamily: 'Dopis, system-ui, sans-serif', fontSize: 'clamp(52px,8vw,108px)', fontWeight: 900, lineHeight: 0.92, letterSpacing: '-0.03em', color: '#0f0e0b', margin: 0 }}
         >
           BITSAT Score
           <br />
-          Analysis
+          <em style={{ fontFamily: 'Season Serif, Georgia, serif', fontStyle: 'italic', fontWeight: 400, letterSpacing: '-0.02em' }}>
+            Analysis.
+          </em>
         </h1>
       </section>
 

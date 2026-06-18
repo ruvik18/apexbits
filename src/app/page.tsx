@@ -5,268 +5,382 @@ import Footer from '@/components/Footer';
 import BitsSketchHero from '@/components/BitsSketchHero';
 
 export const metadata: Metadata = {
-  title: 'ApexBITS — BITSAT Tools for BITS Pilani, Goa & Hyderabad',
+  title: 'ApexBITS — BITSAT College Predictor & Score Data 2026',
   description:
-    'Free BITSAT 2026 college predictor and score data analysis. Predict which BITS programmes you can get based on cutoffs from Phodu Club, MathonGo, and Canvas Classes.',
+    'Free BITSAT 2026 tools — college predictor for BITS Pilani, Goa and Hyderabad, plus score data analysis with 1500+ datapoints. No login. No paywalls.',
 };
 
-const STATS = [
-  { value: '3', label: 'Campuses' },
-  { value: '50+', label: 'Programmes' },
-  { value: '1500+', label: 'Score datapoints' },
-  { value: '3', label: 'Prediction models' },
-];
-
-const FEATURES = [
-  {
-    title: 'College Predictor',
-    description:
-      'See which BITS programmes match your BITSAT score using prediction models from Phodu Club, MathonGo, and Canvas Classes. Filter by campus and branch.',
-    href: '/predictor',
-    bg: '#d5fad3',
-    tag: 'BITSAT · 2026',
-  },
-  {
-    title: 'Score Data Analysis',
-    description:
-      'Explore 1500+ BITSAT score datapoints from Phodu Club and ApexBITS. See distribution charts, mean, median, and estimate your percentile.',
-    href: '/score-data',
-    bg: '#badbee',
-    tag: 'Score data · 1500+ entries',
-  },
-];
-
 const TICKER_ITEMS = [
-  'BITS Pilani', 'BITS Goa', 'BITS Hyderabad', 'BITSAT 2026',
-  'College Predictor', 'Score Analysis', 'Phodu Club', 'MathonGo',
-  'Canvas Classes', 'Free Tools', 'BITS Pilani', 'BITS Goa',
-  'BITS Hyderabad', 'BITSAT 2026', 'College Predictor', 'Score Analysis',
+  'BITS Pilani', '·', 'BITS Goa', '·', 'BITS Hyderabad', '·',
+  'BITSAT 2026', '·', 'College Predictor', '·', 'Score Analysis', '·',
+  'Phodu Club', '·', 'MathonGo', '·', 'Canvas Classes', '·',
+  'Free Tools', '·', '0 Ads. Ever.', '·',
+];
+
+const STATS = [
+  { value: '3',     label: 'Campuses' },
+  { value: '50+',   label: 'Programmes' },
+  { value: '1500+', label: 'Score datapoints' },
+  { value: '0',     label: 'Ads. Ever.' },
 ];
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen">
+    <div style={{ minHeight: '100vh', background: '#f9f9f0' }}>
       <Navbar />
 
-      {/* Hero Section */}
+      {/* ── HERO ──────────────────────────────────────────── */}
       <section
-        className="relative w-full overflow-hidden"
         style={{
           background: '#d5fad3',
           borderBottom: '1px solid rgba(15,14,11,0.1)',
-          paddingTop: '100px',
+          paddingTop: '80px',
+          overflow: 'hidden',
+          position: 'relative',
         }}
       >
-        {/* Grid overlay */}
+        {/* Dot grid overlay */}
         <div
-          className="absolute inset-0 pointer-events-none"
           style={{
-            backgroundImage: 'linear-gradient(rgba(15,14,11,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(15,14,11,0.04) 1px,transparent 1px)',
-            backgroundSize: '36px 36px',
+            position: 'absolute',
+            inset: 0,
+            backgroundImage: 'radial-gradient(circle, rgba(15,14,11,0.18) 1px, transparent 1px)',
+            backgroundSize: '28px 28px',
+            pointerEvents: 'none',
+            zIndex: 0,
           }}
         />
 
-        <div className="relative max-w-[1360px] mx-auto px-6 md:px-10">
-          <div className="flex flex-col items-center text-center pb-6">
-            {/* Eyebrow */}
+        <div
+          style={{
+            position: 'relative',
+            zIndex: 1,
+            maxWidth: '1360px',
+            margin: '0 auto',
+            padding: '0 clamp(20px,4vw,60px)',
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr',
+            alignItems: 'center',
+            gap: '40px',
+            minHeight: 'clamp(480px, 60vh, 680px)',
+          }}
+          className="hero-grid"
+        >
+          {/* ── LEFT COLUMN ── */}
+          <div style={{ paddingBottom: 'clamp(40px,5vw,72px)', paddingTop: 'clamp(20px,3vw,40px)' }}>
+            {/* Eyebrow pill */}
             <div
-              className="inline-flex items-center gap-2 mb-6 animate-fade-up animate-fade-up-delay-1"
+              className="fade-up fade-up-1"
               style={{
-                fontFamily: 'Akkurat Mono, monospace',
-                fontSize: '11px',
-                fontWeight: 500,
-                color: '#3d3b34',
-                textTransform: 'uppercase',
-                letterSpacing: '0.12em',
-              }}
-            >
-              <span
-                className="inline-block w-[7px] h-[7px] rounded-full bg-[#0f0e0b]"
-              />
-              BITSAT · BITS 2026 · 3 Campuses
-            </div>
-
-            {/* Headline */}
-            <h1
-              className="animate-fade-up animate-fade-up-delay-2"
-              style={{
-                fontFamily: 'Season Serif, Georgia, serif',
-                fontSize: 'clamp(52px, 8.5vw, 116px)',
-                fontWeight: 400,
-                lineHeight: 0.93,
-                letterSpacing: '-0.035em',
-                color: '#0f0e0b',
-                maxWidth: '960px',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                padding: '5px 12px 5px 8px',
+                background: 'rgba(15,14,11,0.08)',
+                borderRadius: '9999px',
+                border: '1px solid rgba(15,14,11,0.14)',
                 marginBottom: '28px',
               }}
             >
-              Your BITS
-              <br />
-              Predictor
-            </h1>
+              <span
+                style={{
+                  width: '7px',
+                  height: '7px',
+                  borderRadius: '50%',
+                  background: '#0f0e0b',
+                  flexShrink: 0,
+                }}
+              />
+              <span
+                style={{
+                  fontFamily: 'Akkurat Mono, monospace',
+                  fontSize: '10px',
+                  fontWeight: 600,
+                  color: '#3d3b34',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.1em',
+                }}
+              >
+                BITSAT 2026 · Free tools · 3 Campuses
+              </span>
+            </div>
 
-            {/* Subtitle */}
-            <p
-              className="animate-fade-up animate-fade-up-delay-3"
+            {/* Headline — Dopis Black */}
+            <h1
+              className="fade-up fade-up-2"
               style={{
-                fontFamily: 'Season Serif, Georgia, serif',
-                fontSize: 'clamp(16px, 2vw, 20px)',
-                fontWeight: 400,
-                color: '#3d3b34',
-                lineHeight: 1.55,
-                maxWidth: '540px',
-                marginBottom: '36px',
+                fontFamily: 'Dopis, system-ui, sans-serif',
+                fontSize: 'clamp(52px, 7.5vw, 108px)',
+                fontWeight: 900,
+                lineHeight: 0.92,
+                letterSpacing: '-0.03em',
+                color: '#0f0e0b',
+                margin: '0 0 24px',
               }}
             >
-              Free BITSAT 2026 tools — college predictor and score analysis — built for serious aspirants.
+              The Free
+              <br />
+              BITS
+              <br />
+              <em
+                style={{
+                  fontFamily: 'Season Serif, Georgia, serif',
+                  fontStyle: 'italic',
+                  fontWeight: 400,
+                  letterSpacing: '-0.02em',
+                }}
+              >
+                Ecosystem.
+              </em>
+            </h1>
+
+            {/* Subtitle — Season Serif */}
+            <p
+              className="fade-up fade-up-3"
+              style={{
+                fontFamily: 'Season Serif, Georgia, serif',
+                fontSize: 'clamp(15px, 1.6vw, 18px)',
+                fontWeight: 400,
+                color: '#3d3b34',
+                lineHeight: 1.6,
+                maxWidth: '420px',
+                margin: '0 0 36px',
+              }}
+            >
+              Predict your BITS campus and programme, analyse score distributions — instantly. No login. No paywalls. Just honest data for aspirants.
             </p>
 
-            {/* CTA row */}
-            <div className="flex flex-wrap gap-3 justify-center animate-fade-up animate-fade-up-delay-4">
+            {/* CTA buttons — rectangular pill, NOT circles */}
+            <div
+              className="fade-up fade-up-4"
+              style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}
+            >
               <Link
                 href="/predictor"
-                className="inline-flex items-center justify-center gap-2 h-12 px-7 rounded-full text-[#f9f9f0] bg-[#0f0e0b] border border-[#0f0e0b] hover:bg-[#3d3b34] hover:border-[#3d3b34] transition-all"
-                style={{ fontFamily: 'Akkurat Mono, monospace', fontSize: '11px', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.06em', textDecoration: 'none' }}
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '8px',
+                  height: '50px',
+                  padding: '0 28px',
+                  borderRadius: '9999px',
+                  background: '#0f0e0b',
+                  color: '#f9f9f0',
+                  border: '1.5px solid #0f0e0b',
+                  fontFamily: 'Akkurat Mono, monospace',
+                  fontSize: '11px',
+                  fontWeight: 600,
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.07em',
+                  textDecoration: 'none',
+                  whiteSpace: 'nowrap',
+                  transition: 'background 0.18s',
+                }}
               >
-                College Predictor →
+                Predict BITS →
               </Link>
               <Link
                 href="/score-data"
-                className="inline-flex items-center justify-center gap-2 h-12 px-7 rounded-full text-[#0f0e0b] bg-transparent border border-[#0f0e0b] hover:bg-[rgba(15,14,11,0.06)] transition-all"
-                style={{ fontFamily: 'Akkurat Mono, monospace', fontSize: '11px', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.06em', textDecoration: 'none' }}
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '8px',
+                  height: '50px',
+                  padding: '0 28px',
+                  borderRadius: '9999px',
+                  background: 'transparent',
+                  color: '#0f0e0b',
+                  border: '1.5px solid rgba(15,14,11,0.4)',
+                  fontFamily: 'Akkurat Mono, monospace',
+                  fontSize: '11px',
+                  fontWeight: 600,
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.07em',
+                  textDecoration: 'none',
+                  whiteSpace: 'nowrap',
+                  transition: 'border-color 0.18s, background 0.18s',
+                }}
               >
                 Score Data
               </Link>
             </div>
           </div>
 
-          {/* Animated BITS sketch */}
-          <BitsSketchHero />
+          {/* ── RIGHT COLUMN — BITS SKETCH ── */}
+          <div
+            className="fade-up fade-up-3"
+            style={{
+              height: 'clamp(320px, 45vh, 520px)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <BitsSketchHero />
+          </div>
         </div>
-      </section>
 
-      {/* Ticker */}
-      <div
-        className="w-full overflow-hidden py-3"
-        style={{ background: '#0f0e0b', borderBottom: '1px solid #3d3b34' }}
-      >
-        <div className="animate-ticker flex gap-0 whitespace-nowrap">
-          {[...TICKER_ITEMS, ...TICKER_ITEMS].map((item, i) => (
-            <span
-              key={i}
-              className="inline-flex items-center gap-4 px-6"
-              style={{ fontFamily: 'Akkurat Mono, monospace', fontSize: '10px', fontWeight: 500, color: '#9d937c', textTransform: 'uppercase', letterSpacing: '0.1em' }}
-            >
-              {item}
-              <span className="text-[#3d3b34]">·</span>
-            </span>
-          ))}
-        </div>
-      </div>
-
-      {/* Stats row */}
-      <section
-        className="w-full"
-        style={{ background: '#f9f9f0', borderBottom: '1px solid rgba(15,14,11,0.1)' }}
-      >
-        <div className="max-w-[1360px] mx-auto px-6 md:px-10">
-          <div className="grid grid-cols-2 md:grid-cols-4">
-            {STATS.map((stat, i) => (
+        {/* ── STATS BAR ── */}
+        <div
+          style={{
+            position: 'relative',
+            zIndex: 1,
+            borderTop: '1px solid rgba(15,14,11,0.1)',
+            background: 'rgba(213,250,211,0.7)',
+            backdropFilter: 'blur(4px)',
+          }}
+        >
+          <div
+            style={{
+              maxWidth: '1360px',
+              margin: '0 auto',
+              padding: '0 clamp(20px,4vw,60px)',
+              display: 'grid',
+              gridTemplateColumns: 'repeat(4,1fr)',
+            }}
+            className="stats-grid"
+          >
+            {STATS.map((s, i) => (
               <div
                 key={i}
-                className="flex flex-col justify-center py-10 px-6"
-                style={{ borderRight: i < STATS.length - 1 ? '1px solid rgba(15,14,11,0.1)' : 'none' }}
+                style={{
+                  padding: 'clamp(20px,3vw,28px) 0',
+                  borderRight: i < STATS.length - 1 ? '1px solid rgba(15,14,11,0.1)' : 'none',
+                  paddingLeft: i > 0 ? 'clamp(16px,2.5vw,32px)' : 0,
+                }}
               >
-                <span
+                <div
                   style={{
-                    fontFamily: 'Season Serif, Georgia, serif',
-                    fontSize: 'clamp(42px, 5vw, 72px)',
-                    fontWeight: 400,
+                    fontFamily: 'Dopis, system-ui, sans-serif',
+                    fontSize: 'clamp(32px, 4.5vw, 58px)',
+                    fontWeight: 900,
                     lineHeight: 1,
-                    letterSpacing: '-0.03em',
+                    letterSpacing: '-0.04em',
                     color: '#0f0e0b',
                   }}
                 >
-                  {stat.value}
-                </span>
-                <span
+                  {s.value}
+                </div>
+                <div
                   style={{
                     fontFamily: 'Akkurat Mono, monospace',
                     fontSize: '10px',
-                    fontWeight: 500,
+                    fontWeight: 600,
                     color: '#9d937c',
                     textTransform: 'uppercase',
                     letterSpacing: '0.1em',
-                    marginTop: '6px',
+                    marginTop: '5px',
                   }}
                 >
-                  {stat.label}
-                </span>
+                  {s.label}
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* What is ApexBITS */}
-      <section
-        className="w-full py-20 md:py-28"
-        style={{ background: '#efecca' }}
+      {/* ── DARK TICKER ── */}
+      <div
+        style={{
+          background: '#0f0e0b',
+          borderBottom: '1px solid #3d3b34',
+          overflow: 'hidden',
+          padding: '11px 0',
+        }}
       >
-        <div className="max-w-[1360px] mx-auto px-6 md:px-10">
-          <div className="max-w-3xl">
-            <p
+        <div className="animate-ticker" style={{ display: 'flex', whiteSpace: 'nowrap' }}>
+          {[...TICKER_ITEMS, ...TICKER_ITEMS].map((item, i) => (
+            <span
+              key={i}
               style={{
                 fontFamily: 'Akkurat Mono, monospace',
                 fontSize: '10px',
                 fontWeight: 500,
                 color: '#9d937c',
                 textTransform: 'uppercase',
-                letterSpacing: '0.14em',
-                marginBottom: '24px',
+                letterSpacing: '0.12em',
+                padding: '0 16px',
               }}
             >
-              About
-            </p>
-            <h2
-              style={{
-                fontFamily: 'Season Serif, Georgia, serif',
-                fontSize: 'clamp(32px, 5vw, 72px)',
-                fontWeight: 400,
-                lineHeight: 0.97,
-                letterSpacing: '-0.03em',
-                color: '#0f0e0b',
-                marginBottom: '24px',
-              }}
-            >
-              The smartest way to plan your BITS admission.
-            </h2>
-          </div>
+              {item}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* ── ABOUT SECTION ── */}
+      <section
+        style={{
+          background: '#efecca',
+          borderBottom: '1px solid rgba(15,14,11,0.08)',
+          padding: 'clamp(60px,8vw,120px) clamp(20px,4vw,60px)',
+        }}
+      >
+        <div style={{ maxWidth: '1360px', margin: '0 auto' }}>
           <div
-            className="w-full"
-            style={{ borderTop: '1px solid rgba(15,14,11,0.15)', marginTop: '32px', paddingTop: '32px' }}
-          />
-          <div className="flex flex-col md:flex-row gap-12 justify-end">
-            <div style={{ maxWidth: '480px' }}>
+            style={{
+              display: 'grid',
+              gridTemplateColumns: '1fr 1fr',
+              gap: 'clamp(32px,5vw,80px)',
+              alignItems: 'start',
+            }}
+            className="two-col"
+          >
+            <div>
+              <p
+                style={{
+                  fontFamily: 'Akkurat Mono, monospace',
+                  fontSize: '10px',
+                  fontWeight: 600,
+                  color: '#9d937c',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.14em',
+                  marginBottom: '20px',
+                }}
+              >
+                What is ApexBITS?
+              </p>
+              <h2
+                style={{
+                  fontFamily: 'Dopis, system-ui, sans-serif',
+                  fontSize: 'clamp(36px,5vw,72px)',
+                  fontWeight: 900,
+                  lineHeight: 0.95,
+                  letterSpacing: '-0.03em',
+                  color: '#0f0e0b',
+                  margin: 0,
+                }}
+              >
+                Honest data.
+                <br />
+                <span style={{ fontFamily: 'Season Serif, Georgia, serif', fontStyle: 'italic', fontWeight: 400 }}>
+                  Zero paywalls.
+                </span>
+              </h2>
+            </div>
+            <div style={{ paddingTop: '8px' }}>
               <p
                 style={{
                   fontFamily: 'Season Serif, Georgia, serif',
-                  fontSize: '18px',
+                  fontSize: 'clamp(16px,1.6vw,19px)',
                   fontWeight: 400,
                   color: '#3d3b34',
-                  lineHeight: 1.6,
-                  marginBottom: '16px',
+                  lineHeight: 1.65,
+                  marginBottom: '20px',
                 }}
               >
-                Cutoff predictions aren&#39;t guarantees — but having the right data matters. ApexBITS brings together the best prediction models from Phodu Club, MathonGo, and Canvas Classes in one place.
+                Cutoff predictions aren&apos;t guarantees — but having the right data matters. ApexBITS brings together the best prediction models from Phodu Club, MathonGo, and Canvas Classes in one place.
               </p>
               <p
                 style={{
                   fontFamily: 'Season Serif, Georgia, serif',
-                  fontSize: '18px',
+                  fontSize: 'clamp(16px,1.6vw,19px)',
                   fontWeight: 400,
                   color: '#3d3b34',
-                  lineHeight: 1.6,
+                  lineHeight: 1.65,
                 }}
               >
                 Built for BITSAT 2026 aspirants who want clarity — not confusion — when choosing their programmes.
@@ -276,332 +390,377 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Feature Cards */}
+      {/* ── FEATURES ── */}
       <section
-        className="w-full py-20 md:py-28"
-        style={{ background: '#d5fad3' }}
+        style={{
+          background: '#f9f9f0',
+          borderBottom: '1px solid rgba(15,14,11,0.08)',
+          padding: 'clamp(60px,8vw,120px) clamp(20px,4vw,60px)',
+        }}
       >
-        <div className="max-w-[1360px] mx-auto px-6 md:px-10">
-          <div className="mb-12">
+        <div style={{ maxWidth: '1360px', margin: '0 auto' }}>
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'baseline',
+              justifyContent: 'space-between',
+              gap: '20px',
+              flexWrap: 'wrap',
+              marginBottom: 'clamp(32px,4vw,56px)',
+            }}
+          >
+            <h2
+              style={{
+                fontFamily: 'Dopis, system-ui, sans-serif',
+                fontSize: 'clamp(36px,5.5vw,80px)',
+                fontWeight: 900,
+                lineHeight: 0.95,
+                letterSpacing: '-0.03em',
+                color: '#0f0e0b',
+                margin: 0,
+              }}
+            >
+              What we offer.
+            </h2>
+            <Link
+              href="/predictor"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '6px',
+                height: '40px',
+                padding: '0 18px',
+                borderRadius: '9999px',
+                border: '1.5px solid rgba(15,14,11,0.25)',
+                fontFamily: 'Akkurat Mono, monospace',
+                fontSize: '10px',
+                fontWeight: 600,
+                color: '#3d3b34',
+                textTransform: 'uppercase',
+                letterSpacing: '0.08em',
+                textDecoration: 'none',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              All tools →
+            </Link>
+          </div>
+
+          <div
+            style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}
+            className="two-col"
+          >
+            {/* Card 1 — College Predictor */}
+            <Link
+              href="/predictor"
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                background: '#21201c',
+                border: '1px solid #3d3b34',
+                padding: 'clamp(28px,4vw,52px)',
+                minHeight: 'clamp(320px,38vw,440px)',
+                textDecoration: 'none',
+                position: 'relative',
+                overflow: 'hidden',
+                transition: 'transform 0.2s',
+              }}
+            >
+              <div>
+                <div
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '6px',
+                    padding: '4px 10px',
+                    borderRadius: '9999px',
+                    background: 'rgba(213,250,211,0.15)',
+                    border: '1px solid rgba(213,250,211,0.25)',
+                    marginBottom: '20px',
+                  }}
+                >
+                  <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#d5fad3' }} />
+                  <span style={{ fontFamily: 'Akkurat Mono, monospace', fontSize: '10px', fontWeight: 600, color: '#d5fad3', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+                    BITSAT · 2026
+                  </span>
+                </div>
+                <h3
+                  style={{
+                    fontFamily: 'Dopis, system-ui, sans-serif',
+                    fontSize: 'clamp(28px,3.5vw,48px)',
+                    fontWeight: 900,
+                    lineHeight: 0.96,
+                    letterSpacing: '-0.025em',
+                    color: '#f9f9f0',
+                    margin: '0 0 16px',
+                  }}
+                >
+                  College
+                  <br />
+                  Predictor
+                </h3>
+                <p
+                  style={{
+                    fontFamily: 'Season Serif, Georgia, serif',
+                    fontSize: '15px',
+                    fontWeight: 400,
+                    color: '#9d937c',
+                    lineHeight: 1.65,
+                    maxWidth: '340px',
+                  }}
+                >
+                  See which BITS programmes match your score using Phodu Club, MathonGo, and Canvas Classes prediction models. Filter by campus and branch.
+                </p>
+              </div>
+              {/* Decorative illustration */}
+              <div style={{ position: 'absolute', right: 'clamp(20px,3vw,40px)', bottom: 'clamp(20px,3vw,40px)', opacity: 0.08 }}>
+                <svg width="100" height="100" viewBox="0 0 100 100" fill="none" stroke="#d5fad3" strokeWidth="1">
+                  <circle cx="50" cy="50" r="44" />
+                  {[0,1,2,3,4,5,6,7].map(i => {
+                    const a = (i * Math.PI * 2) / 8;
+                    return <line key={i} x1="50" y1="50" x2={50 + Math.cos(a) * 44} y2={50 + Math.sin(a) * 44} />;
+                  })}
+                  <circle cx="50" cy="50" r="22" />
+                  <circle cx="50" cy="50" r="8" />
+                </svg>
+              </div>
+              <div
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '10px',
+                  marginTop: '32px',
+                  fontFamily: 'Akkurat Mono, monospace',
+                  fontSize: '10px',
+                  fontWeight: 600,
+                  color: '#9d937c',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.1em',
+                }}
+              >
+                <span
+                  style={{
+                    width: '36px',
+                    height: '36px',
+                    borderRadius: '50%',
+                    border: '1px solid #3d3b34',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: '#f9f9f0',
+                    fontSize: '16px',
+                  }}
+                >
+                  →
+                </span>
+                Explore
+              </div>
+            </Link>
+
+            {/* Card 2 — Score Data */}
+            <Link
+              href="/score-data"
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                background: '#badbee',
+                border: '1px solid rgba(15,14,11,0.12)',
+                padding: 'clamp(28px,4vw,52px)',
+                minHeight: 'clamp(320px,38vw,440px)',
+                textDecoration: 'none',
+                position: 'relative',
+                overflow: 'hidden',
+                transition: 'transform 0.2s',
+              }}
+            >
+              <div>
+                <div
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '6px',
+                    padding: '4px 10px',
+                    borderRadius: '9999px',
+                    background: 'rgba(15,14,11,0.08)',
+                    border: '1px solid rgba(15,14,11,0.14)',
+                    marginBottom: '20px',
+                  }}
+                >
+                  <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#0f0e0b' }} />
+                  <span style={{ fontFamily: 'Akkurat Mono, monospace', fontSize: '10px', fontWeight: 600, color: '#0f0e0b', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+                    Score data · 1500+ entries
+                  </span>
+                </div>
+                <h3
+                  style={{
+                    fontFamily: 'Dopis, system-ui, sans-serif',
+                    fontSize: 'clamp(28px,3.5vw,48px)',
+                    fontWeight: 900,
+                    lineHeight: 0.96,
+                    letterSpacing: '-0.025em',
+                    color: '#0f0e0b',
+                    margin: '0 0 16px',
+                  }}
+                >
+                  Score
+                  <br />
+                  Analysis
+                </h3>
+                <p
+                  style={{
+                    fontFamily: 'Season Serif, Georgia, serif',
+                    fontSize: '15px',
+                    fontWeight: 400,
+                    color: '#3d3b34',
+                    lineHeight: 1.65,
+                    maxWidth: '340px',
+                  }}
+                >
+                  Explore 1500+ BITSAT score datapoints from Phodu Club and ApexBITS. Distribution charts, mean, median, and percentile comparison.
+                </p>
+              </div>
+              {/* Bar chart decoration */}
+              <div style={{ position: 'absolute', right: 'clamp(20px,3vw,40px)', bottom: 'clamp(20px,3vw,40px)', opacity: 0.12 }}>
+                <svg width="100" height="80" viewBox="0 0 100 80" fill="none" stroke="#0f0e0b" strokeWidth="1.2">
+                  {[12,28,44,60,76].map((x, i) => {
+                    const h = [20,40,60,35,50][i];
+                    return <rect key={i} x={x} y={70 - h} width="14" height={h} />;
+                  })}
+                  <line x1="5" y1="70" x2="95" y2="70" />
+                </svg>
+              </div>
+              <div
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '10px',
+                  marginTop: '32px',
+                  fontFamily: 'Akkurat Mono, monospace',
+                  fontSize: '10px',
+                  fontWeight: 600,
+                  color: '#3d3b34',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.1em',
+                }}
+              >
+                <span
+                  style={{
+                    width: '36px',
+                    height: '36px',
+                    borderRadius: '50%',
+                    border: '1.5px solid rgba(15,14,11,0.3)',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: '#0f0e0b',
+                    fontSize: '16px',
+                  }}
+                >
+                  →
+                </span>
+                Explore
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA SECTION ── */}
+      <section
+        style={{
+          background: '#0f0e0b',
+          padding: 'clamp(60px,8vw,120px) clamp(20px,4vw,60px)',
+        }}
+      >
+        <div
+          style={{
+            maxWidth: '1360px',
+            margin: '0 auto',
+            display: 'grid',
+            gridTemplateColumns: '1fr auto',
+            alignItems: 'center',
+            gap: '40px',
+          }}
+          className="cta-grid"
+        >
+          <div>
             <p
               style={{
                 fontFamily: 'Akkurat Mono, monospace',
                 fontSize: '10px',
-                fontWeight: 500,
+                fontWeight: 600,
                 color: '#3d3b34',
                 textTransform: 'uppercase',
                 letterSpacing: '0.14em',
-                marginBottom: '16px',
+                marginBottom: '20px',
               }}
             >
-              What runs on ApexBITS?
+              Get started — free
             </p>
             <h2
               style={{
-                fontFamily: 'Season Serif, Georgia, serif',
-                fontSize: 'clamp(36px, 5.5vw, 80px)',
-                fontWeight: 400,
-                lineHeight: 0.97,
-                letterSpacing: '-0.02em',
-                color: '#0f0e0b',
+                fontFamily: 'Dopis, system-ui, sans-serif',
+                fontSize: 'clamp(36px,6vw,88px)',
+                fontWeight: 900,
+                lineHeight: 0.95,
+                letterSpacing: '-0.03em',
+                color: '#f9f9f0',
+                margin: 0,
               }}
             >
-              Just about everything.
+              Enter your score.
+              <br />
+              <span style={{ fontFamily: 'Season Serif, Georgia, serif', fontStyle: 'italic', fontWeight: 400 }}>
+                See your options.
+              </span>
             </h2>
-            <div className="mt-6">
-              <Link
-                href="/predictor"
-                className="inline-flex items-center gap-2 h-10 px-5 rounded-full text-[#0f0e0b] border border-[#0f0e0b] hover:bg-[rgba(15,14,11,0.06)] transition-all"
-                style={{ fontFamily: 'Akkurat Mono, monospace', fontSize: '10px', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.08em', textDecoration: 'none' }}
-              >
-                → All Tools
-              </Link>
-            </div>
           </div>
-
-          <div className="grid md:grid-cols-2 gap-4">
-            {FEATURES.map((f) => (
-              <Link
-                key={f.href}
-                href={f.href}
-                className="group relative flex flex-col justify-between overflow-hidden rounded-none"
-                style={{
-                  background: '#21201c',
-                  border: '1px solid #3d3b34',
-                  padding: 'clamp(28px, 4vw, 48px)',
-                  minHeight: '400px',
-                  textDecoration: 'none',
-                  transition: 'transform 0.2s ease',
-                }}
-              >
-                {/* Tag */}
-                <div>
-                  <span
-                    className="inline-block mb-4"
-                    style={{
-                      fontFamily: 'Akkurat Mono, monospace',
-                      fontSize: '10px',
-                      fontWeight: 500,
-                      color: '#9d937c',
-                      textTransform: 'uppercase',
-                      letterSpacing: '0.12em',
-                    }}
-                  >
-                    {f.tag}
-                  </span>
-                  <h3
-                    style={{
-                      fontFamily: 'Season Serif, Georgia, serif',
-                      fontSize: 'clamp(26px, 3.5vw, 44px)',
-                      fontWeight: 400,
-                      lineHeight: 1.05,
-                      letterSpacing: '-0.02em',
-                      color: '#f9f9f0',
-                      marginBottom: '16px',
-                    }}
-                  >
-                    {f.title}
-                  </h3>
-                  <p
-                    style={{
-                      fontFamily: 'Season Serif, Georgia, serif',
-                      fontSize: '15px',
-                      fontWeight: 400,
-                      color: '#9d937c',
-                      lineHeight: 1.6,
-                      maxWidth: '360px',
-                    }}
-                  >
-                    {f.description}
-                  </p>
-                </div>
-
-                {/* Card decorative illustration */}
-                <div className="absolute bottom-10 right-10 opacity-10 pointer-events-none">
-                  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" stroke={f.bg} strokeWidth="1.2">
-                    {f.href === '/predictor' ? (
-                      <>
-                        <circle cx="60" cy="60" r="50" />
-                        {Array.from({ length: 8 }).map((_, i) => {
-                          const a = (i * Math.PI * 2) / 8;
-                          return <line key={i} x1="60" y1="60" x2={60 + Math.cos(a) * 50} y2={60 + Math.sin(a) * 50} />;
-                        })}
-                        <circle cx="60" cy="60" r="28" />
-                        <circle cx="60" cy="60" r="8" />
-                      </>
-                    ) : (
-                      <>
-                        {Array.from({ length: 5 }).map((_, i) => (
-                          <rect key={i} x={i * 22 + 5} y={120 - (i * 18 + 20)} width="16" height={i * 18 + 20} />
-                        ))}
-                        <line x1="5" y1="100" x2="115" y2="100" />
-                      </>
-                    )}
-                  </svg>
-                </div>
-
-                {/* Discover link */}
-                <div className="mt-8 flex items-center gap-3">
-                  <span
-                    className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-[#3d3b34] text-[#f9f9f0] group-hover:bg-[#f9f9f0] group-hover:text-[#0f0e0b] transition-all"
-                    style={{ fontSize: '14px' }}
-                  >
-                    →
-                  </span>
-                  <span
-                    style={{
-                      fontFamily: 'Akkurat Mono, monospace',
-                      fontSize: '10px',
-                      fontWeight: 500,
-                      color: '#9d937c',
-                      textTransform: 'uppercase',
-                      letterSpacing: '0.12em',
-                    }}
-                  >
-                    Discover
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Performance stat section - Aptos-inspired */}
-      <section
-        className="w-full py-20 md:py-28 relative overflow-hidden"
-        style={{ background: '#f9f9f0', borderTop: '1px solid rgba(15,14,11,0.1)' }}
-      >
-        {/* Grid bg */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            backgroundImage: 'linear-gradient(rgba(15,14,11,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(15,14,11,0.025) 1px,transparent 1px)',
-            backgroundSize: '36px 36px',
-          }}
-        />
-
-        {/* Code lines (right side decoration) */}
-        <div
-          className="absolute right-6 top-0 bottom-0 overflow-hidden pointer-events-none hidden xl:block"
-          style={{ width: '200px', opacity: 0.07 }}
-        >
-          <div
-            className="code-scroll flex flex-col gap-0 pt-8"
-            style={{ fontFamily: 'Akkurat Mono, monospace', fontSize: '8px', color: '#0f0e0b', lineHeight: 1.6 }}
-          >
-            {Array.from({ length: 40 }).map((_, i) => {
-              const lines = [
-                '/// YOU BUILD', '/// NO DOWNTIME', 'public fun deploy()', '{', '  return true', '}',
-                '/// GET HELP', '/// GRANTS, TOOLS', 'public fun access()', '{', '  return true', '}',
-                'module aptos::predict {', '  fun cutoff(s: u64)', '  : Result {', '  return s', '  }', '}',
-              ];
-              return <div key={i}>{lines[i % lines.length]}</div>;
-            })}
-            {Array.from({ length: 40 }).map((_, i) => {
-              const lines = [
-                '/// YOU BUILD', '/// NO DOWNTIME', 'public fun deploy()', '{', '  return true', '}',
-                '/// GET HELP', '/// GRANTS, TOOLS', 'public fun access()', '{', '  return true', '}',
-              ];
-              return <div key={`b-${i}`}>{lines[i % lines.length]}</div>;
-            })}
-          </div>
-        </div>
-
-        <div className="relative max-w-[1360px] mx-auto px-6 md:px-10">
-          <div className="flex flex-col md:flex-row items-start gap-12">
-            <div className="md:w-[40%]">
-              <div
-                style={{
-                  fontFamily: 'Season Serif, Georgia, serif',
-                  fontSize: 'clamp(64px, 9vw, 120px)',
-                  fontWeight: 400,
-                  lineHeight: 0.92,
-                  letterSpacing: '-0.04em',
-                  color: '#0f0e0b',
-                }}
-              >
-                ~50ms
-              </div>
-              <div
-                style={{
-                  fontFamily: 'Season Serif, Georgia, serif',
-                  fontSize: 'clamp(24px, 3.5vw, 48px)',
-                  fontWeight: 400,
-                  lineHeight: 1.1,
-                  letterSpacing: '-0.02em',
-                  color: '#0f0e0b',
-                  marginTop: '8px',
-                }}
-              >
-                prediction time
-              </div>
-              <p
-                style={{
-                  fontFamily: 'Akkurat Mono, monospace',
-                  fontSize: '10px',
-                  fontWeight: 500,
-                  color: '#9d937c',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.12em',
-                  marginTop: '16px',
-                }}
-              >
-                Instant results. No signup.
-              </p>
-              <p
-                style={{
-                  fontFamily: 'Season Serif, Georgia, serif',
-                  fontSize: '16px',
-                  color: '#3d3b34',
-                  lineHeight: 1.65,
-                  maxWidth: '320px',
-                  marginTop: '24px',
-                }}
-              >
-                While other tools gatekeep behind logins, ApexBITS gives you instant, transparent predictions — right in your browser.
-              </p>
-            </div>
-
-            {/* Geodesic sphere decoration */}
-            <div className="flex-1 flex items-center justify-center">
-              <svg viewBox="0 0 300 300" width="300" height="300" fill="none" stroke="#0f0e0b" strokeWidth="0.8" opacity="0.45" style={{ maxWidth: '100%' }}>
-                <circle cx="150" cy="150" r="120" />
-                {/* Pentagon grid lines */}
-                {Array.from({ length: 12 }).map((_, i) => {
-                  const a = (i * Math.PI * 2) / 12;
-                  const a2 = ((i + 1) * Math.PI * 2) / 12;
-                  return (
-                    <g key={i}>
-                      <line x1={150 + Math.cos(a) * 120} y1={150 + Math.sin(a) * 120} x2={150 + Math.cos(a2) * 120} y2={150 + Math.sin(a2) * 120} />
-                      <line x1={150 + Math.cos(a) * 70} y1={150 + Math.sin(a) * 70} x2={150 + Math.cos(a) * 120} y2={150 + Math.sin(a) * 120} />
-                      <line x1={150 + Math.cos(a) * 70} y1={150 + Math.sin(a) * 70} x2={150 + Math.cos(a2) * 70} y2={150 + Math.sin(a2) * 70} />
-                    </g>
-                  );
-                })}
-                <circle cx="150" cy="150" r="70" />
-                <circle cx="150" cy="150" r="35" />
-                {/* Center logo waves */}
-                <path d="M135,150 Q142,140 150,150 Q158,160 165,150" strokeWidth="2" />
-                <path d="M130,155 Q142,140 150,155 Q158,170 170,155" strokeWidth="1.5" />
-                {/* Decorative squares at corners */}
-                {[
-                  { x: 30, y: 30 }, { x: 260, y: 30 }, { x: 30, y: 260 }, { x: 260, y: 260 },
-                  { x: 145, y: 20 }, { x: 145, y: 270 }, { x: 20, y: 145 }, { x: 270, y: 145 },
-                ].map((pt, i) => (
-                  <rect key={i} x={pt.x - 4} y={pt.y - 4} width="8" height="8" />
-                ))}
-              </svg>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section
-        className="w-full py-20 md:py-28"
-        style={{ background: '#0f0e0b' }}
-      >
-        <div className="max-w-[1360px] mx-auto px-6 md:px-10 text-center">
-          <p
-            style={{
-              fontFamily: 'Akkurat Mono, monospace',
-              fontSize: '10px',
-              fontWeight: 500,
-              color: '#3d3b34',
-              textTransform: 'uppercase',
-              letterSpacing: '0.14em',
-              marginBottom: '24px',
-            }}
-          >
-            Get started
-          </p>
-          <h2
-            style={{
-              fontFamily: 'Season Serif, Georgia, serif',
-              fontSize: 'clamp(36px, 6vw, 88px)',
-              fontWeight: 400,
-              lineHeight: 0.97,
-              letterSpacing: '-0.025em',
-              color: '#f9f9f0',
-              maxWidth: '760px',
-              margin: '0 auto 32px',
-            }}
-          >
-            Enter your score. See your options.
-          </h2>
-          <div className="flex flex-wrap gap-3 justify-center">
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', flexShrink: 0 }}>
             <Link
               href="/predictor"
-              className="inline-flex items-center justify-center gap-2 h-14 px-8 rounded-full text-[#0f0e0b] bg-[#f9f9f0] border border-[#f9f9f0] hover:bg-[#efecca] transition-all"
-              style={{ fontFamily: 'Akkurat Mono, monospace', fontSize: '12px', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.06em', textDecoration: 'none' }}
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                height: '52px',
+                padding: '0 32px',
+                borderRadius: '9999px',
+                background: '#f9f9f0',
+                color: '#0f0e0b',
+                border: '1.5px solid #f9f9f0',
+                fontFamily: 'Akkurat Mono, monospace',
+                fontSize: '11px',
+                fontWeight: 600,
+                textTransform: 'uppercase',
+                letterSpacing: '0.07em',
+                textDecoration: 'none',
+                whiteSpace: 'nowrap',
+              }}
             >
               College Predictor →
             </Link>
             <Link
               href="/score-data"
-              className="inline-flex items-center justify-center gap-2 h-14 px-8 rounded-full text-[#f9f9f0] bg-transparent border border-[#3d3b34] hover:border-[#9d937c] transition-all"
-              style={{ fontFamily: 'Akkurat Mono, monospace', fontSize: '12px', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.06em', textDecoration: 'none' }}
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                height: '52px',
+                padding: '0 32px',
+                borderRadius: '9999px',
+                background: 'transparent',
+                color: '#9d937c',
+                border: '1.5px solid #3d3b34',
+                fontFamily: 'Akkurat Mono, monospace',
+                fontSize: '11px',
+                fontWeight: 600,
+                textTransform: 'uppercase',
+                letterSpacing: '0.07em',
+                textDecoration: 'none',
+                whiteSpace: 'nowrap',
+              }}
             >
               Score Data
             </Link>

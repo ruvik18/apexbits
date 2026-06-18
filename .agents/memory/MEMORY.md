@@ -1,1 +1,3 @@
 - [Tailwind + Next.js version pinning](tailwind-nextjs-compat.md) — Next.js 14 requires Tailwind v3; Tailwind v4 (installed by default) has incompatible config format and PostCSS plugin name.
+- [ApexBITS font system](apexbits-fonts.md) — Three fonts: Dopis (display/Black for headlines), Season Serif (italic accents + body), Akkurat Mono (UI labels). Dopis woff2 files are in public/fonts/.
+- [ApexBITS inline style tag hydration](apexbits-hydration.md) — Never put <style> tags in Next.js server components (page.tsx, Footer, etc.); move all @media rules to globals.css to avoid SSR/client hydration mismatch warnings.
