@@ -188,9 +188,9 @@ export default function PredictorClient() {
           <br />
           <em
             style={{
-              fontFamily: "Season Serif, Georgia, serif",
-              fontStyle: "italic",
-              fontWeight: 400,
+              fontFamily: "Dopis, system-ui, sans-serif",
+              fontStyle: "normal",
+              fontWeight: 300,
               letterSpacing: "-0.02em",
             }}
           >

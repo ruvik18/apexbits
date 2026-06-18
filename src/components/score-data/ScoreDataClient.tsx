@@ -231,7 +231,7 @@ export default function ScoreDataClient() {
         <h1 className="relative font-display font-black text-ink m-0" style={{ fontSize: 'clamp(52px,8vw,108px)', lineHeight: 0.92, letterSpacing: '-0.03em' }}>
           BITSAT Score
           <br />
-          <em className="font-serif font-light" style={{ fontStyle: 'italic', letterSpacing: '-0.02em' }}>
+          <em style={{ fontFamily: 'Dopis, system-ui, sans-serif', fontStyle: 'normal', fontWeight: 300, letterSpacing: '-0.02em' }}>
             Analysis.
           </em>
         </h1>
